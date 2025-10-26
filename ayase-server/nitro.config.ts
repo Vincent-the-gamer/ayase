@@ -2,7 +2,7 @@
 export default defineNitroConfig({
   srcDir: 'server',
   logLevel: 2,
-  compatibilityDate: "2025-10-26",
+  compatibilityDate: '2025-10-26',
   errorHandler: '~/error',
   // Cross Origin
   routeRules: {
@@ -16,6 +16,6 @@ export default defineNitroConfig({
   },
   // WebSocket
   experimental: {
-    websocket: true
-  }
+    websocket: true,
+  },
 })

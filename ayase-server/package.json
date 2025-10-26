@@ -1,21 +1,21 @@
 {
   "name": "ayase-server",
   "version": "0.1.0",
+  "packageManager": "pnpm@10.19.0",
   "description": "",
-  "keywords": [],
   "author": "",
   "license": "MIT",
-  "packageManager": "pnpm@10.19.0",
+  "keywords": [],
   "scripts": {
     "build": "nitro build",
     "dev": "nitro dev --port 8081",
     "prepare": "nitro prepare",
     "start": "NITRO_PORT=3001 node .output/server/index.mjs"
   },
-  "devDependencies": {
-    "nitropack": "^2.12.8"
-  },
   "dependencies": {
     "tslog": "^4.10.2"
+  },
+  "devDependencies": {
+    "nitropack": "^2.12.8"
   }
 }
