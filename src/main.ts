@@ -2,6 +2,9 @@
   const app = document.createElement('div');
   document.body.append(app);
 
+  // Connect websocket 
+  const ws = new WebSocket("ws://localhost:8081/websocket")
+
   const observer = new MutationObserver((mutations, _) => {
       mutations.forEach((mutation) => {
         if(mutation.type === 'childList') {
@@ -19,7 +22,9 @@
             danmaku.replacement = emoticon.querySelector('span.open-menu')?.innerHTML!
           }
 
-          console.log(danmaku)
+          ws.send(
+            JSON.stringify(danmaku)
+          )
         }
       })
   })

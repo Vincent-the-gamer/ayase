@@ -1,6 +1,6 @@
 {
   "name": "ayase",
-  "description": "A userscript + server to observe and record Bilibili live danmakus.",
+  "description": "A userscript + websocket to observe and record Bilibili live danmakus.",
   "author": "Vincent-the-gamer",
   "version": "0.1.0",
   "type": "module",
