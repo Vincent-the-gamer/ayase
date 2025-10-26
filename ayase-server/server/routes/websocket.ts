@@ -5,15 +5,15 @@ export default defineWebSocketHandler({
 
   message(peer, message) {
     const msg = JSON.parse(message.data as string)
-    console.log("[ws] message", msg);
+    console.log("[ayase-websocket] message", msg);
   },
 
   close(peer, event) {
-    console.log("[ws] close", event);
+    console.log("[ayase-websocket] close", event);
   },
 
   error(peer, error) {
-    console.log("[ws] error", error);
+    console.log("[ayase-websocket] error", error);
   },
 });
 
