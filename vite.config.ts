@@ -15,6 +15,7 @@ export default defineConfig({
         match: [
           'https://live.bilibili.com/*'
         ],
+        license: "https://github.com/Vincent-the-gamer/ayase/blob/main/LICENSE.md"
       },
     }),
   ],

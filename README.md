@@ -6,7 +6,9 @@
 
 ## Usage
 
-1. Download userscript from [release](https://github.com/Vincent-the-gamer/ayase/releases) or from greasyfork(to be uploaded soon).
+1. Download userscript from [release](https://github.com/Vincent-the-gamer/ayase/releases) 
+or from greasyfork(to be uploaded soon).
+
 2. Clone this project, and:
 ```shell
 cd ayase-server
