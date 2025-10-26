@@ -1,0 +1,17 @@
+{
+  "name": "ayase",
+  "description": "A userscript + server to observe and record Bilibili live danmakus.",
+  "author": "Vincent-the-gamer",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3",
+    "vite-plugin-monkey": "^7.1.1"
+  }
+}
