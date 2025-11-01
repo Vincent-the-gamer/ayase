@@ -24,9 +24,9 @@ input!.addEventListener('input', (event: any) => {
 
 button!.addEventListener('click', () => {
   const { observer, startObserver, stopObserver } = setupObserver(inputValue)
-
+  let ws: WebSocket | null = null
   if(!observer) {
     stopObserver()
   } 
-  startObserver()
+  ws = startObserver()!
 })

@@ -1,3 +1,5 @@
+import { plugin2048 } from "./plugins/plugin-2048"
+
 export function setupObserver(serverLink: string) {
   let observer: MutationObserver | null = null
 
@@ -5,12 +7,14 @@ export function setupObserver(serverLink: string) {
     try {
       // Connect websocket
       const ws = new WebSocket(serverLink)
+      
       observer = new MutationObserver((mutations, _) => {
         mutations.forEach((mutation) => {
           if (mutation.type === 'childList') {
             const addedNodes = Array.from(mutation.addedNodes)
             const node = addedNodes[0] as HTMLElement
             const danmaku = {
+              type: "danmaku",
               uname: node.querySelector('span.user-name')?.innerHTML,
               text: node.getAttribute('data-danmaku'),
               img: '',
@@ -41,8 +45,12 @@ export function setupObserver(serverLink: string) {
         observer.observe(danmakuDOMList, config)
       }
 
+      ws.onmessage = (event) => {
+         // plugins
+         plugin2048(event.data)
+      }
+
       alert(`WebSocket连接: ${serverLink}`)
-      return observer
     }
     catch (e) {
       alert(`WebSocket连接错误: ${e}`)

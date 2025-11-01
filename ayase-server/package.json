@@ -16,6 +16,6 @@
     "tslog": "^4.10.2"
   },
   "devDependencies": {
-    "nitropack": "^2.12.8"
+    "nitropack": "latest"
   }
 }

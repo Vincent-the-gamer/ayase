@@ -14,6 +14,7 @@ export default defineConfig({
         namespace: 'https://github.com/Vincent-the-gamer/ayase',
         match: [
           'https://live.bilibili.com/*',
+          'https://2048game.com'
         ],
         license: 'https://github.com/Vincent-the-gamer/ayase/blob/main/LICENSE.md',
       },
