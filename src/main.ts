@@ -15,10 +15,18 @@ import './style.css'
 `
 
 const input = document.querySelector<HTMLInputElement>('#ayase-link')
+const button = document.querySelector<HTMLInputElement>('#start-ayase')
+let inputValue = input!.value
 
-input!.addEventListener('change', (event: any) => {
-  setupObserver(
-    document.querySelector<HTMLButtonElement>('#start-ayase')!,
-    event.target.value,
-  )
+input!.addEventListener('input', (event: any) => {
+  inputValue = event.target.value
+})
+
+button!.addEventListener('click', () => {
+  const { observer, startObserver, stopObserver } = setupObserver(inputValue)
+
+  if(!observer) {
+    stopObserver()
+  } 
+  startObserver()
 })

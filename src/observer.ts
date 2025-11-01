@@ -1,10 +1,11 @@
-export function setupObserver(element: HTMLElement, serverLink: string) {
+export function setupObserver(serverLink: string) {
+  let observer: MutationObserver | null = null
+
   const startObserver = () => {
     try {
       // Connect websocket
       const ws = new WebSocket(serverLink)
-
-      const observer = new MutationObserver((mutations, _) => {
+      observer = new MutationObserver((mutations, _) => {
         mutations.forEach((mutation) => {
           if (mutation.type === 'childList') {
             const addedNodes = Array.from(mutation.addedNodes)
@@ -41,7 +42,6 @@ export function setupObserver(element: HTMLElement, serverLink: string) {
       }
 
       alert(`WebSocket连接: ${serverLink}`)
-
       return observer
     }
     catch (e) {
@@ -49,11 +49,9 @@ export function setupObserver(element: HTMLElement, serverLink: string) {
     }
   }
 
-  let observer: MutationObserver
-  element.addEventListener('click', () => {
-    if (observer) {
-      observer.disconnect()
-    }
-    observer = startObserver()!
-  })
+  const stopObserver = () => {
+    observer?.disconnect()
+  }
+
+  return { observer, startObserver, stopObserver }
 }

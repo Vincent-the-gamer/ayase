@@ -5,7 +5,14 @@ export default defineWebSocketHandler({
 
   message(peer, message) {
     const msg = JSON.parse(message.data as string)
-    console.log('[ayase-websocket] message', msg)
+    const { uname, text, img, replacement } = msg
+    const danmaku = {
+      uname: uname.replace(':', '').trim(),
+      text,
+      img,
+      replacement,
+    }
+    console.log('[ayase-websocket] message', danmaku)
   },
 
   close(peer, event) {
