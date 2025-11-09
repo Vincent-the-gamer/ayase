@@ -9,19 +9,28 @@
 1. Download userscript from [release](https://github.com/Vincent-the-gamer/ayase/releases)
 or install from [greasyfork](https://greasyfork.org/zh-CN/scripts/553774-ayase).
 
-2. Clone this project, and:
+2. Download websocket server from [release](https://github.com/Vincent-the-gamer/ayase/releases), and:
 ```shell
-cd ayase-server
-
-# build your own nitro server, and you'll get an .output folder
-pnpm run build
-
 # start your server
 NITRO_PORT=xxxx node .output/server/index.mjs"
 ```
-3. Open any Bilibili live room, set your server address, then the userscript will automatically send the danmaku to your websocket server.
+
+3. Clone this project, run a game handler with Python(using pyautogui library).
+```shell
+cd ayase-handler
+
+poetry install
+
+source .venv/bin/activate
+
+# 2048game
+python 2048.py
+```
+
+4. Open any Bilibili live room, set your server address, then the userscript will automatically send the danmaku to your websocket server.
 
 ![usage](./.github/usage.png)
+
 
 ## Preview
 

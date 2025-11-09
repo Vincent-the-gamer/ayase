@@ -26,3 +26,7 @@ dist-ssr
 # nitro server
 .nitro
 .output
+
+# python
+.venv
+venv

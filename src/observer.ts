@@ -1,4 +1,4 @@
-import { plugin2048 } from "./plugins/plugin-2048"
+import game2048 from "./plugins/game2048"
 
 export function setupObserver(serverLink: string) {
   let observer: MutationObserver | null = null
@@ -26,9 +26,11 @@ export function setupObserver(serverLink: string) {
               danmaku.replacement = emoticon.querySelector('span.open-menu')?.innerHTML!
             }
 
-            ws.send(
-              JSON.stringify(danmaku),
-            )
+            // ws.send(
+            //   JSON.stringify(danmaku),
+            // )
+
+            game2048(ws, danmaku)
           }
         })
       })
@@ -43,11 +45,6 @@ export function setupObserver(serverLink: string) {
 
       if (danmakuDOMList) {
         observer.observe(danmakuDOMList, config)
-      }
-
-      ws.onmessage = (event) => {
-         // plugins
-         plugin2048(event.data)
       }
 
       alert(`WebSocket连接: ${serverLink}`)
