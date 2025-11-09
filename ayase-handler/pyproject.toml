@@ -1,6 +1,6 @@
 [project]
 name = "ayase-handler"
-version = "0.1.0"
+version = "0.1.1"
 description = "Use pyautogui to control the game"
 authors = [
     {name = "Vincent-the-gamer",email = "erxianqiaottjt@163.com"}

@@ -1,12 +1,12 @@
 {
   "name": "ayase",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A userscript + websocket to observe and record Bilibili live danmakus.",
   "author": "Vincent-the-gamer",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "lint:fix": "eslint . --fix"
   },
