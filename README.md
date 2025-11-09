@@ -12,7 +12,7 @@ or install from [greasyfork](https://greasyfork.org/zh-CN/scripts/553774-ayase).
 2. Download websocket server from [release](https://github.com/Vincent-the-gamer/ayase/releases), and:
 ```shell
 # start your server
-NITRO_PORT=xxxx node .output/server/index.mjs"
+NITRO_PORT=xxxx node ayase-server/server/index.mjs"
 ```
 
 3. Clone this project, run a game handler with Python(using pyautogui library).
@@ -34,7 +34,7 @@ python 2048.py
 
 ## Demo
 
-See Demo on Bilibili: [Demo](https://www.bilibili.com/video/BV17pkQBmEJM)
+See demo on Bilibili: [Demo](https://www.bilibili.com/video/BV17pkQBmEJM)
 
 ## License
 
