@@ -34,7 +34,7 @@ python 2048.py
 
 ## Demo
 
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115518765861521&bvid=BV17pkQBmEJM&cid=33853933278&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+See Demo on Bilibili: [Demo](https://www.bilibili.com/video/BV17pkQBmEJM)
 
 ## License
 
