@@ -23,14 +23,14 @@ poetry install
 
 source .venv/bin/activate
 
-# 2048game
+# 2048game: https://2048game.com/
+# You need to open the page, then let pyautogui to control it.
 python 2048.py
 ```
 
 4. Open any Bilibili live room, set your server address, then the userscript will automatically send the danmaku to your websocket server.
 
 ![usage](./.github/usage.png)
-
 
 ## Preview
 
